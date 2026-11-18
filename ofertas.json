@@ -1,0 +1,28 @@
+{
+  "atualizado_em": "2026-11-18",
+  "aviso": "Preços conferidos na data acima. Podem mudar a qualquer momento: confira na loja antes de comprar.",
+  "whatsapp_link": "",
+  "instagram_link": "",
+  "ofertas": [
+    {
+      "categoria": "Jogo",
+      "produto": "GTA 6 — Edição Standard (PS5 / Xbox Series X|S)",
+      "loja": "PlayStation Store / Microsoft Store",
+      "preco": "R$ 449,90",
+      "observacao": "Preço oficial. Na caixa física vem um código para baixar, não tem disco.",
+      "link": "https://store.playstation.com/pt-br/",
+      "afiliado": false,
+      "destaque": true
+    },
+    {
+      "categoria": "Jogo",
+      "produto": "GTA 6 — Ultimate Edition (PS5 / Xbox Series X|S)",
+      "loja": "PlayStation Store / Microsoft Store",
+      "preco": "R$ 549,90",
+      "observacao": "Preço oficial. Inclui veículos, roupas, armas e atividades extras.",
+      "link": "https://store.playstation.com/pt-br/",
+      "afiliado": false,
+      "destaque": false
+    }
+  ]
+}
