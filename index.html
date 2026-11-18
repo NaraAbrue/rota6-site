@@ -35,9 +35,11 @@
   /* Header */
   header{position:sticky;top:0;z-index:10;background:rgba(253,244,225,.86);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
   header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
-  .brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-weight:800;letter-spacing:.3px;font-size:21px}
-  .brand img{width:46px;height:46px;object-fit:contain}
-  .brand b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+  .brand img{width:48px;height:48px;object-fit:contain}
+  .brand-text{display:flex;flex-direction:column;line-height:1.05}
+  .brand-name{font-family:var(--head);font-weight:800;font-size:20px;letter-spacing:-.3px}
+  .brand-tag{font-family:var(--body);font-size:12px;font-weight:500;color:var(--muted);margin-top:2px}
   nav{display:flex;gap:6px}
   nav a{color:var(--muted);text-decoration:none;font-size:15px;font-weight:600;padding:8px 12px;border-radius:10px;transition:background .2s,color .2s}
   nav a:hover{color:var(--ink);background:var(--bg2)}
@@ -74,11 +76,23 @@
     transform:perspective(300px) rotateX(55deg);transform-origin:bottom;pointer-events:none;opacity:.8}
 
   /* Sections */
-  section{padding:56px 0}
+  section{padding:56px 0;scroll-margin-top:70px}
   .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--pink);margin-bottom:6px}
   h2{font-size:clamp(28px,3.8vw,40px);line-height:1.1;font-weight:800;letter-spacing:-.6px}
   .sub{color:var(--muted);margin-top:8px;max-width:640px}
   .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:26px}
+
+  /* Sobre */
+  .about{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+  .about-text p{color:var(--muted);margin-top:12px}
+  .about-text p strong{color:var(--ink)}
+  .pillars{display:grid;gap:14px}
+  .pillar{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:var(--shadow)}
+  .pillar .icon{flex:none;margin:0;width:42px;height:42px;border-radius:12px}
+  .pillar .icon svg{width:22px;height:22px}
+  .pillar h3{font-size:17px;font-weight:800}
+  .pillar p{color:var(--muted);font-size:15px;margin-top:2px}
+  @media (max-width:800px){.about{grid-template-columns:1fr;gap:22px}}
 
   /* Cards */
   .card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
@@ -131,6 +145,7 @@
   footer{background:var(--ink);color:#BFB3D6;padding:44px 0 36px;font-size:13px;margin-top:40px}
   .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:22px}
   .foot .brand{color:#fff}
+  .foot .brand-tag{color:#BFB3D6}
   .foot nav a{color:#D9CBEA}
   .foot nav a:hover{background:rgba(255,255,255,.08);color:#fff}
   footer p+p{margin-top:8px}
@@ -155,8 +170,9 @@
 <body>
 <header>
   <div class="wrap">
-    <a class="brand" href="#"><img src="assets/logo-r6-v2.png" alt="Logo Rota 6">ROTA <b>6</b></a>
+    <a class="brand" href="#"><img src="assets/logo-r6-v2.png" alt="Logo Rota 6"><span class="brand-text"><span class="brand-name">Rota 6</span><span class="brand-tag">Dicas e ofertas de GTA 6</span></span></a>
     <nav>
+      <a href="#sobre">Sobre</a>
       <a href="#ofertas">Ofertas</a>
       <a href="#edicoes">Qual edição</a>
       <a href="#kit">Kit</a>
@@ -189,6 +205,25 @@
     </div>
     <div class="grid-floor"></div>
   </div>
+
+  <section id="sobre">
+    <div class="wrap reveal about">
+      <div class="about-text">
+        <span class="eyebrow">O que é a Rota 6</span>
+        <h2>Seu atalho para jogar GTA 6 gastando menos</h2>
+        <p>A <strong>Rota 6</strong> é um site independente, feito por fãs, para quem vai jogar GTA 6 no Brasil. A gente confere todo dia onde o jogo, o console e os acessórios estão mais baratos e explica tudo de um jeito simples.</p>
+        <p>Aqui você também encontra <strong>dicas e guias sem spoiler da história</strong>: o que fazer primeiro, como ganhar dinheiro no jogo, onde estão os carros e colecionáveis. Novidades todo dia também no nosso Instagram.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><path d="M7.5 7.5h.01"/></svg></div>
+          <div><h3>Preço conferido todo dia</h3><p>Só publicamos valor que checamos na loja, sempre com a data da consulta.</p></div></div>
+        <div class="pillar"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <div><h3>Dicas e guias sem spoiler</h3><p>Mecânicas, mapa, dinheiro e itens. A história fica para você descobrir.</p></div></div>
+        <div class="pillar"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <div><h3>Independente e transparente</h3><p>Sem ligação com a Rockstar. Quando um link é de afiliado, a gente avisa.</p></div></div>
+      </div>
+    </div>
+  </section>
 
   <section id="ofertas">
     <div class="wrap reveal">
@@ -273,8 +308,9 @@
 <footer>
   <div class="wrap">
     <div class="foot">
-      <a class="brand" href="#"><img src="assets/logo-r6-v2.png" alt="Logo Rota 6">ROTA <b>6</b></a>
+      <a class="brand" href="#"><img src="assets/logo-r6-v2.png" alt="Logo Rota 6"><span class="brand-text"><span class="brand-name">Rota 6</span><span class="brand-tag">Dicas e ofertas de GTA 6</span></span></a>
       <nav>
+        <a href="#sobre">Sobre</a>
         <a href="#ofertas">Ofertas</a>
         <a href="#edicoes">Qual edição</a>
         <a href="#kit">Kit</a>
